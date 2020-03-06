@@ -26,7 +26,7 @@ public class GameGateway implements PongConstants {
     Circle ball;
     Circle ball2;
     boolean isOpen = true;
-    Bricks bricks = new Bricks();
+    Bricks bricks;
     
     public GameGateway() {
         try {
@@ -60,6 +60,7 @@ public class GameGateway implements PongConstants {
         shapes.add(ball2);
         
         //Add the bricks
+        bricks = new Bricks();
         for (Rectangle i : bricks.getBricks()) {
             shapes.add(i);
         }

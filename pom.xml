@@ -36,4 +36,5 @@
             </plugin>
         </plugins>
     </build>
+    <name>PongClient_Kevin</name>
 </project>
