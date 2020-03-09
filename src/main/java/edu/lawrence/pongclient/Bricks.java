@@ -32,21 +32,15 @@ public class Bricks implements PongConstants{
         shapes.add(brick6);    
     }
     
-    public List<Rectangle> setColors(int counter1, int counter2, int counter3, int counter4, int counter5, int counter6) {
-        if (counter1 == 1)
-            brick1.setFill(BLUE);
-        if (counter2 == 1)
-            brick2.setFill(BLUE);
-        if (counter3 == 1)
-            brick3.setFill(BLUE);
-        if (counter4 == 1)
-            brick4.setFill(BLUE);
-        if (counter5 == 1)
-            brick5.setFill(BLUE);
-        if (counter6 == 1)
-            brick6.setFill(BLUE);
-        return shapes;
-    }
+    public void setColors(int counter1, int counter2, int counter3, int counter4, int counter5, int counter6) {
+        brick1.setFill(counter1);
+        brick2.setFill(counter2);
+        brick3.setFill(counter3);
+        brick4.setFill(counter4);
+        brick5.setFill(counter5);
+        brick6.setFill(counter6);
+    }   
+    
     
     public List<Rectangle> getBricks(){return shapes;}
 }

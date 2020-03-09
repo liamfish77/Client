@@ -88,6 +88,7 @@ public class GameGateway implements PongConstants {
             System.out.println("Exception in GameGateway.");
             ex.printStackTrace();
         }
+        //System.out.println("got state :: " + state);
         String parts[] = state.split(" ");
         ball.setCenterX(Double.parseDouble(parts[0]));
         ball.setCenterY(Double.parseDouble(parts[1]));
@@ -95,6 +96,9 @@ public class GameGateway implements PongConstants {
         ball2.setCenterY(Double.parseDouble(parts[3]));
         redPaddle.setX(Double.parseDouble(parts[4]));
         bluePaddle.setX(Double.parseDouble(parts[5]));
+        bricks.setColors(Integer.parseInt(parts[6]), Integer.parseInt(parts[7]),
+                Integer.parseInt(parts[8]), Integer.parseInt(parts[9]), Integer.parseInt(parts[10]),
+                Integer.parseInt(parts[11]));
     }
     
     public void close() {
